@@ -1,1 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoKids</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<div class="menu">
+
+    <h2>EcoKids</h2>
+
+    <button onclick="openScreen('splash')">Splash</button>
+    <button onclick="openScreen('login')">Login</button>
+    <button onclick="openScreen('create')">Criar Conta</button>
+    <button onclick="openScreen('recover')">Recuperar</button>
+    <button onclick="openScreen('home')">Home</button>
+    <button onclick="openScreen('boards')">Pranchas</button>
+    <button onclick="openScreen('profile')">Perfil</button>
+    <button onclick="openScreen('favorites')">Favoritos</button>
+    <button onclick="openScreen('settings')">Configurações</button>
+    <button onclick="openScreen('parents')">Área dos Pais</button>
+
+</div>
+
+<!-- CONTAINER -->
+
+<div class="app">
+
+<!-- SPLASH -->
+
+<section class="screen active" id="splash">
+
+    <div class="logo">
+
+        <h1>
+            <span class="eco">Eco</span>
+            <span class="kids">Kids</span>
+        </h1>
+
+    </div>
+
+    <div class="subtitle">
+        Ecoando sentimentos e palavras
+    </div>
+
+    <div class="kids-emoji">
+        🧒👧👦
+    </div>
+
+    <button class="btn blue" onclick="openScreen('login')">
+        Entrar
+    </button>
+
+</section>
+
+<!-- LOGIN -->
+
+<section class="screen" id="login">
+
+    <h2 class="title">
+        Bem-vindo 👋
+    </h2>
+
+    <input class="input" id="email" placeholder="E-mail">
+
+    <input class="input" id="senha" type="password" placeholder="Senha">
+
+    <div class="link" onclick="openScreen('recover')">
+        Esqueci minha senha
+    </div>
+
+    <button class="btn blue" onclick="login()">
+        Entrar
+    </button>
+
+    <button class="btn green" onclick="openScreen('create')">
+        Criar conta
+    </button>
+
+</section>
+
+<!-- CREATE ACCOUNT -->
+
+<section class="screen" id="create">
+
+    <h2 class="title">
+        Criar Conta
+    </h2>
+
+    <input class="input" placeholder="Nome da criança">
+
+    <input class="input" placeholder="Nome do responsável">
+
+    <input class="input" placeholder="E-mail">
+
+    <input class="input" type="password" placeholder="Senha">
+
+    <input class="input" type="password" placeholder="Confirmar senha">
+
+    <h3 class="center">
+        Escolha um avatar
+    </h3>
+
+    <div class="avatar-list">
+
+        <div class="avatar">👦</div>
+        <div class="avatar">👧</div>
+        <div class="avatar">🧒</div>
+        <div class="avatar">👦</div>
+        <div class="avatar">👧</div>
+        <div class="avatar">🧒</div>
+
+    </div>
+
+    <button class="btn green" onclick="createAccount()">
+        Criar conta
+    </button>
+
+</section>
+
+<!-- RECOVER -->
+
+<section class="screen" id="recover">
+
+    <h2 class="title">
+        Recuperar Conta
+    </h2>
+
+    <div class="recover-icon">
+        🔒
+    </div>
+
+    <input class="input" id="recover-email" placeholder="Digite seu e-mail">
+
+    <button class="btn blue" onclick="recoverPassword()">
+        Enviar código
+    </button>
+
+</section>
+
+<!-- HOME -->
+
+<section class="screen" id="home">
+
+    <div class="home-header">
+
+        <div class="user">
+
+            <div class="user-avatar">
+                👧
+            </div>
+
+            <div>
+                <strong>Olá, Julia 👋</strong>
+                <small>Vamos nos comunicar?</small>
+            </div>
+
+        </div>
+
+        <div class="notification">
+            🔔
+        </div>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="card card-red" onclick="speak('Estou com fome')">
+            <span>🍔</span>
+            Fome
+        </div>
+
+        <div class="card card-blue" onclick="speak('Quero água')">
+            <span>💧</span>
+            Sede
+        </div>
+
+        <div class="card card-green" onclick="speak('Quero brincar')">
+            <span>🎮</span>
+            Brincar
+        </div>
+
+        <div class="card card-purple" onclick="speak('Quero dormir')">
+            <span>🌙</span>
+            Sono
+        </div>
+
+        <div class="card card-cyan" onclick="speak('Banheiro')">
+            <span>🚽</span>
+            Banheiro
+        </div>
+
+        <div class="card card-yellow" onclick="speak('Estou feliz')">
+            <span>❤️</span>
+            Emoções
+        </div>
+
+    </div>
+
+    <div class="nav">
+
+        <div onclick="openScreen('home')">
+            🏠 <br> Home
+        </div>
+
+        <div onclick="openScreen('boards')">
+            🧩 <br> Pranchas
+        </div>
+
+        <div onclick="openScreen('favorites')">
+            ⭐ <br> Favoritos
+        </div>
+
+        <div onclick="openScreen('profile')">
+            👤 <br> Perfil
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRANCHAS -->
+
+<section class="screen" id="boards">
+
+    <h2 class="section-title">
+        Pranchas
+    </h2>
+
+    <div class="list">
+
+        <div class="item">
+            <div class="item-left">
+                <div class="icon red">🍴</div>
+                Alimentação
+            </div>
+            ➜
+        </div>
+
+        <div class="item">
+            <div class="item-left">
+                <div class="icon blue">🥤</div>
+                Bebidas
+            </div>
+            ➜
+        </div>
+
+        <div class="item">
+            <div class="item-left">
+                <div class="icon pink">❤️</div>
+                Emoções
+            </div>
+            ➜
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PERFIL -->
+
+<section class="screen" id="profile">
+
+    <div class="profile">
+
+        <div class="big-avatar">
+            👧
+        </div>
+
+        <div class="profile-name">
+            Julia
+        </div>
+
+        <div class="profile-age">
+            7 anos
+        </div>
+
+    </div>
+
+    <div class="settings">
+
+        <div class="setting">
+            Editar perfil ➜
+        </div>
+
+        <div class="setting">
+            Alterar avatar ➜
+        </div>
+
+        <div class="setting">
+            Preferências ➜
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAVORITOS -->
+
+<section class="screen" id="favorites">
+
+    <h2 class="section-title">
+        Favoritos
+    </h2>
+
+    <div class="item">
+        Quero água 🔊 ⭐
+    </div>
+
+    <div class="item">
+        Estou feliz 🔊 ⭐
+    </div>
+
+    <div class="item">
+        Quero brincar 🔊 ⭐
+    </div>
+
+</section>
+
+<!-- SETTINGS -->
+
+<section class="screen" id="settings">
+
+    <h2 class="section-title">
+        Configurações
+    </h2>
+
+    <div class="setting">
+        Vibração
+        <div class="toggle active"></div>
+    </div>
+
+    <div class="setting">
+        Alto contraste
+        <div class="toggle"></div>
+    </div>
+
+    <div class="setting">
+        Textos maiores
+        <div class="toggle"></div>
+    </div>
+
+</section>
+
+<!-- PARENTS -->
+
+<section class="screen" id="parents">
+
+    <h2 class="section-title green-text">
+        Área dos Pais
+    </h2>
+
+    <div class="graph">
+
+        <div class="bar" style="height:90px;"></div>
+        <div class="bar" style="height:130px;"></div>
+        <div class="bar" style="height:70px;"></div>
+        <div class="bar" style="height:150px;"></div>
+
+    </div>
+
+    <div class="setting">
+        Frases mais usadas ➜
+    </div>
+
+    <div class="setting">
+        Relatórios ➜
+    </div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

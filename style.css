@@ -1,1 +1,397 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Nunito', sans-serif;
+}
 
+body{
+    background:#f4f7ff;
+    display:flex;
+    min-height:100vh;
+}
+
+/* MENU */
+
+.menu{
+    width:240px;
+    background:white;
+    padding:25px;
+    border-right:1px solid #ddd;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.menu h2{
+    color:#1e90ff;
+    margin-bottom:20px;
+}
+
+.menu button{
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#edf4ff;
+    cursor:pointer;
+    font-weight:800;
+    transition:.3s;
+}
+
+.menu button:hover{
+    background:#1e90ff;
+    color:white;
+}
+
+/* APP */
+
+.app{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* TELAS */
+
+.screen{
+    width:380px;
+    min-height:760px;
+    background:white;
+    border-radius:35px;
+    padding:25px;
+    display:none;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.screen.active{
+    display:block;
+}
+
+/* LOGO */
+
+.logo{
+    text-align:center;
+    margin-top:60px;
+}
+
+.logo h1{
+    font-size:54px;
+    font-weight:900;
+}
+
+.eco{
+    color:#1e90ff;
+}
+
+.kids{
+    color:#32cd32;
+}
+
+.subtitle{
+    text-align:center;
+    margin-top:15px;
+    color:#666;
+    font-size:20px;
+}
+
+.kids-emoji{
+    font-size:120px;
+    text-align:center;
+    margin:70px 0;
+}
+
+/* TITLES */
+
+.title{
+    text-align:center;
+    color:#1e90ff;
+    font-size:34px;
+    margin-top:40px;
+}
+
+.section-title{
+    color:#1e90ff;
+    font-size:34px;
+}
+
+.green-text{
+    color:#32cd32;
+}
+
+/* INPUT */
+
+.input{
+    width:100%;
+    padding:16px;
+    margin-top:15px;
+    border:none;
+    border-radius:16px;
+    background:#f3f7ff;
+    font-size:16px;
+}
+
+/* BUTTONS */
+
+.btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    margin-top:18px;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.blue{
+    background:#1e90ff;
+    color:white;
+}
+
+.green{
+    background:#32cd32;
+    color:white;
+}
+
+/* LINKS */
+
+.link{
+    text-align:center;
+    margin-top:15px;
+    color:#1e90ff;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* AVATARS */
+
+.avatar-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.avatar{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#f0f0f0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.avatar.selected{
+    border:4px solid #32cd32;
+}
+
+/* HOME */
+
+.home-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.user{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.user-avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#1e90ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.card{
+    height:120px;
+    border-radius:25px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.card span{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.card-red{background:#ff4d4d;}
+.card-blue{background:#1e90ff;}
+.card-green{background:#32cd32;}
+.card-yellow{background:#ffbf00;}
+.card-purple{background:#7d4dff;}
+.card-cyan{background:#14c7d8;}
+
+/* NAV */
+
+.nav{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-around;
+    font-weight:700;
+    color:#666;
+}
+
+/* LIST */
+
+.list{
+    margin-top:25px;
+}
+
+.item{
+    background:#f7f9ff;
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:700;
+}
+
+.item-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+/* PROFILE */
+
+.profile{
+    text-align:center;
+    margin-top:25px;
+}
+
+.big-avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#ff4d4d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:60px;
+    margin:auto;
+}
+
+.profile-name{
+    font-size:34px;
+    font-weight:900;
+    margin-top:20px;
+}
+
+.profile-age{
+    color:#666;
+}
+
+/* SETTINGS */
+
+.settings{
+    margin-top:25px;
+}
+
+.setting{
+    background:#f7f9ff;
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:700;
+}
+
+/* TOGGLE */
+
+.toggle{
+    width:55px;
+    height:28px;
+    background:#ccc;
+    border-radius:30px;
+    position:relative;
+    cursor:pointer;
+}
+
+.toggle::before{
+    content:'';
+    width:22px;
+    height:22px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    left:3px;
+    top:3px;
+}
+
+.toggle.active{
+    background:#32cd32;
+}
+
+.toggle.active::before{
+    left:30px;
+}
+
+/* GRAPH */
+
+.graph{
+    height:170px;
+    display:flex;
+    align-items:flex-end;
+    gap:12px;
+    margin:30px 0;
+}
+
+.bar{
+    width:35px;
+    background:#7ed957;
+    border-radius:10px 10px 0 0;
+}
+
+/* RECOVER */
+
+.recover-icon{
+    font-size:120px;
+    text-align:center;
+    margin:40px 0;
+}
+
+.center{
+    text-align:center;
+}
